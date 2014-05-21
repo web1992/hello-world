@@ -1,0 +1,26 @@
+<html>
+	<head >
+			<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+        add book-edit <a href="/lib/book"> book </a><hr />
+	
+			
+			<form method="post" action="/lib/book/update"  >
+                <div>ID</div>  
+				<input name="id" type="text" value="${book.id}" readonly ="readonly">
+				<div>name</div>
+				<input name="name" type="text" value="${book.name}">
+				<div>price</div>
+				<input name="price" type="text" value="${book.price}">
+				<div>author</div>
+				<input name="author" type="text" value="${book.author}">
+				<div>createTime</div>
+				<input name="createTime" type="text"  value="${book.createTime}">
+				<div></div>
+				<input name="" type="submit"  value="update">
+			</form>
+		
+	
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<head >
+			<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+		user -add <hr />
+		
+		<form method="post" title="" action="/lib/user/addUser">
+                    <div>loginName</div>
+					<input type="text" name="loginName"><br />
+						
+					<div>name</div>
+					<input type="text" name="name"><br />
+						
+					<div>password</div>
+					<input type="password" name="password"><br />
+						
+						
+					<div></div>
+					<input type="submit" value="add"/><br />
+			</form>
+	
+    </body>
+</html>

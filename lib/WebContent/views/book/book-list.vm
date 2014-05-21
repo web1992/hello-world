@@ -1,0 +1,48 @@
+<html>
+	<head >
+<style type="text/css" > 
+</style>
+	<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+		${userInfo.name},你好！<br>
+        add book-list <a href="/lib/book/add">add book </a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/lib/user">user manager</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		#if(${userInfo.name} eq "admin")
+			<a href="/lib/logs/logsList">user oper_log</a
+		#end
+		
+		<hr />
+		<table cellpadding="0">
+            <tr>
+                <th>ID</th>
+				<th>NAME</th> 
+				<th>PRICE</th> 
+				<th>AUTHOR</th> 
+				<th>createTime</th>
+				<th>operating</th>
+				<th>remark</th>
+			</tr>
+		
+		#foreach( ${b} in ${books})
+			<tr>
+				<td>$!{b.id}</td>
+				<td>$!{b.name}</td> 
+				<td>$!{b.price}</td> 
+				<td>$!{b.author}</td> 
+				<td>$!{date.format("yy-MM-dd ", ${b.createTime})}</td>
+				<td>
+					<a href="/lib/book/get?bookId=$!{b.id}">edit book </a> 
+					&nbsp;&nbsp;
+					<a href="/lib/book/delete?bookId=$!{b.id}&edit=$!{isEdit}">delete book </a> 
+					&nbsp;&nbsp;
+					
+				</td>
+                <td><a href="/lib/book/listRemark?bookId=$!{b.id}&bookName=$!{b.name}">remark book </a></td>
+			</tr>
+		#end
+		</table>
+    </body>
+</html>

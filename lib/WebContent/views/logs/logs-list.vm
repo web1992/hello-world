@@ -1,0 +1,32 @@
+<html>
+	<head >
+			<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+		oper_log
+		<hr />
+          <table cellpadding="0">
+            <tr>
+                <th>ID</th>
+				<th>UserNAME</th> 
+				<th>resourcePattern</th> 
+				<th>resourceId</th> 
+				<th>success</th>
+				<th>createTime</th>
+				<th>remarks</th>
+			</tr>
+		
+			#foreach( ${log} in ${operLogs})
+			<tr>
+                <td>${log.id}</td>
+				<td>${log.userName}</td>
+				<td>${log.resourcePattern}</td>
+				<td>${log.resourceId}</td>
+				<td>${log.success}</td>
+				<td>${log.createTime}</td>
+				<td>${log.remarks}</td>
+			</tr>
+		#end
+		</table>
+    </body>
+</html>

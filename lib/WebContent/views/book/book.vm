@@ -1,0 +1,15 @@
+<html>
+	<head >
+			<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+        add book-list <a href="/lib/add-book">add book </a><hr />
+	
+		#foreach( ${b} in ${books})
+		${b.id} , ${b.name} , ${b.price}  ,${b.author},  ${b.createTime} <br />
+		#end
+	
+		
+	
+    </body>
+</html>

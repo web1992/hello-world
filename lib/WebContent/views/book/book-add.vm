@@ -1,0 +1,25 @@
+<html>
+	<head >
+			<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+		add book <hr />
+	
+            <form method="post" title="" action="/lib/book">
+                    <div>bookName</div>
+					<input type="text" name="name"><br />
+						
+					<div>price</div>
+					<input type="text" name="price"><br />
+						
+					<div>author</div>
+					<input type="text" name="author"><br />
+						
+					<div>createTime</div>
+					<input type="text" name="createTime"><br />
+						
+					<div></div>
+					<input type="submit" value="add"/><br />
+			</form>
+    </body>
+</html>

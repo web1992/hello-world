@@ -1,0 +1,38 @@
+<html>
+	<head >
+		<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+	
+    </head>
+	<body >
+        user -list 
+		${userInfo.name},你好！<br>
+		
+		<br>
+		<a  href="/lib/user/add?isEdit=$!{isEdit}">add user </a> <br>
+		<a  href="/lib/book">book list </a>  <hr />
+			<table cellpadding="0" border="0px solid;">
+                <tr>
+                    <th>ID</th>
+					<th>LOGIN_NAME</th>
+					<th>NAME</th>
+					<th>PASSWORD</th>
+					<th>createTime</th>
+                    <th>operating</th>
+				</tr>
+            
+			#foreach(${user} in ${users})
+                <tr>
+                    <td>$!{user.id}</td>
+					<td>$!{user.loginName}</td>
+					<td>$!{user.name}</td>
+					<td>$!{user.password}</td>
+					<td>$!{user.createTime}</td>
+					<td>
+						##<a  href="/lib/user/user?userId=$!{user.id}&isEdit=$!{isEdit}">edit user </a>
+						<a  href="/lib/user/delete?userId=$!{user.id}&isEdit=$!{isEdit}">delete user </a>
+					</td>
+				</tr>
+			#end
+			</table>
+    </body>
+</html>

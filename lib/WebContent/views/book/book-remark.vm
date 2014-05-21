@@ -1,0 +1,51 @@
+<html>
+	<head >
+			<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+     $!{userInfo.loginName} 你好！ &nbsp;&nbsp;&nbsp;  book remarks <a href="/lib/book">book </a>
+	   <hr />
+	    $!{msg}
+		<form action="/lib/book/addRemark" method="post">
+                <div>bookId</div>
+				<input type="text" value="$!{bookId}" name="bookId" readonly="readonly">
+				<input type="hidden"  value="$!{userInfo.loginName}" name="userName" readonly="readonly">
+				<div>essay</div>
+			    <textarea name="essay" cols="50" rows="9">
+                </textarea>
+                <div></div>
+				<input type="submit" value="add remark">  
+					
+        </form>
+	  <hr>
+		#if($!{userInfo.name} eq "admin")
+		<a href="/lib/book/deleteRemark?bookId=$!{bookId}">delete all</a>
+        #end
+        <table>
+            <tr>
+                <th>ID</th>
+				<th>userName</th>
+				<th>bookId</th>
+				<th>essay</th>
+				<th>createTime</th>
+				#if($!{userInfo.name} eq "admin")
+				<th>operating</th>
+                #end
+			</tr>
+		
+    	   #foreach(${remark} in ${remarks})
+                <tr>
+                    <td>$!{remark.id}</td>
+    				<td>$!{remark.userName}</td>
+    				<td>$!{remark.bookId}</td>
+    				<td>$!{remark.essay}</td>
+    				<td>$!{remark.createTime}</td>
+					#if($!{userInfo.name} eq "admin")
+				    <td><a href="/lib/book/deleteRemark?remarkId=$!{remark.id}&bookId=$!{bookId}">delete</a></td>
+                    #end
+                    
+    			</tr>
+    	   #end
+		</table>
+    </body>
+</html>

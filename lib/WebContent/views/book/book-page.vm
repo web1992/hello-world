@@ -1,0 +1,14 @@
+<html>
+	<head >
+			<link href="/lib/views/css/body.css" rel="stylesheet"type="text/css"/>
+    </head>
+	<body >
+       sorry ! 没有权限<br />
+	   <a href="/lib/book">返回 </a><hr />
+	
+		
+	
+		
+	
+    </body>
+</html>
