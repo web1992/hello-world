@@ -2,7 +2,7 @@ hello world ! 2014-05-21
 #目的：
       1. Git的，了解，使用，配置，工程上传，fork
       2. paoding-rose,vtl,jade,eclipse,mysql,resin 的集成测试
-#更多过资料：
+#更多资料：
       https://code.google.com/p/paoding-rose/
 #工程描述
       1，使用paoding-rose ,vtl,jade, eclipse, mysql ,resin 建立的book管理系统，
